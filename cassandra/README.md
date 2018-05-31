@@ -54,6 +54,7 @@ services:
         image: cassandra:3.9
         restart: unless-stopped
         volumes:
+            - ./docker-entrypoint.sh:/docker-entrypoint.sh
             - /var/db/cassandra:/var/lib/cassandra
             - ./db-schema:/docker-entrypoint-initdb.d/
         ports:
