@@ -3,40 +3,28 @@
 Import schema (.cql file)
 
 ```bash
-cqlsh -e "SOURCE '/path/to/schema.cql'"
+mysql -u username -p new_database < data-dump.sql
 ```
-
-OR
-
-```bash
-cqlsh
-
-use keyspacename; 
-
-source 'table_schema_file.cql';
-```
+- data-dump.sql is the data dump file to be imported, located in the current directory
 
 ## DOCKER 
 
 ```bash
-
+docker exec -i CONTAINER_ID /bin/bash -c "export TERM=xterm && mysql -proot -uroot database" < data-dump.sql
 ```
 
 # EXPORT
 
-Export keyspace schema
+Export database schema
 
 ```bash
-cqlsh -e "DESC KEYSPACE user" > user_schema.cql
+mysqldump -u username -p database_name > data-dump.sql
 ```
+- data-dump.sql is the file in the current directory that the output will be saved to
 
-Export entire database schema
-
-```bash
-cqlsh -e "DESC SCHEMA" > db_schema.cql
-```
 
 ## DOCKER
 
 ```bash
+docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > data-dump.sql
 ```
