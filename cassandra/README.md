@@ -41,7 +41,7 @@ cqlsh -e "DESC SCHEMA" > db_schema.cql
 ```bash
 ```
 
-# Seeding cassandra for developer with default record
+# Seeding cassandra for developer with default data
 
 ## DOCKER
 
