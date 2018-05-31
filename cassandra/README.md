@@ -56,7 +56,7 @@ services:
         volumes:
             - ./docker-entrypoint.sh:/docker-entrypoint.sh
             - /var/db/cassandra:/var/lib/cassandra
-            - ./db-schema:/docker-entrypoint-initdb.d/
+            - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
         ports:
             - 7000:7000
             - 7001:7001
