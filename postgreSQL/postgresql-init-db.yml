@@ -1,11 +1,12 @@
-version: '2'
+version: '3'
 services:
     postgresql:
         image: postgres
         volumes:
             - /var/db/postgresql/:/var/lib/postgresql/data/
+            - ./postgres-initdb.sh:/docker-entrypoint-initdb.d/init.sh
         environment:
-            - POSTGRES_USER=postgre
-            - POSTGRES_PASSWORD=postgre
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=
         ports:
             - 5432:5432

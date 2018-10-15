@@ -1,0 +1,13 @@
+version: '2'
+services:
+    postgresql:
+        image: postgres
+        volumes:
+            - postgre_data:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=postgreSQL
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
+volumes:
+    postgre_data:
