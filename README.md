@@ -3,7 +3,7 @@
 This project contains scripts to Import/Export Database schemas
 
 
-|Suported Databases|
+|Supported Databases|
 |---|
 |Cassandra|
 |Couchbase|
