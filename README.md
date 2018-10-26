@@ -4,7 +4,7 @@ This project contains scripts to Import/Export Database schemas
 
 
 |Suported Databases|
----
+|---|
 |Cassandra|
 |Couchbase|
 |MariaDB|
